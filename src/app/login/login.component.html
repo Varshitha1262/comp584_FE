@@ -1,0 +1,33 @@
+<section id="title-main">
+	<div class="container">
+		<h1>Login</h1>
+	</div>
+</section>
+
+
+<section id="make-appointment" class="login_wrap">
+	<div class="container">
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mb-4">
+						<label>Email</label>
+						<input type="email" name="email" formControlName="email" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="mb-4">
+						<label>Password</label>
+						<input type="password" name="password" formControlName="password" class="form-control">
+					</div>
+				</div>
+				
+			<div class="row">
+				<div class="col-md-12">
+					<button type="submit" class="appointment-btn">Login</button>
+				</div>
+			</div>
+			</div>
+		</form>
+	</div>
+</section>

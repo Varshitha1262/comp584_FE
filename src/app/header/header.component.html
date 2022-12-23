@@ -1,0 +1,40 @@
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<p class="mb-0 top-ro d-none d-sm-none d-md-none d-lg-block"><img src="assets/images/address.png"> Lichfield Road,Hopwas,Tamworth, Staffordshire,UK</p>
+			</div>
+			<div class="col-md-4">
+			
+			</div>
+			<div class="col-md-4">
+				<p class="mb-0 top-ro d-none d-sm-none d-md-none d-lg-block"><img src="assets/images/phone-call.png"> + 01827 62514</p>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light">
+	  		<div class="container">
+	    		<a class="navbar-brand" routerLink="home"><img src="assets/images/logo.png"></a>
+	    		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      			<span class="navbar-toggler-icon"></span>
+	    		</button>
+	    		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      			<ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+	        			<li class="nav-item"><a class="nav-link" routerLink="">Home</a></li>
+	        			<li class="nav-item"><a class="nav-link" routerLink="about">About Us</a></li>
+	        			<li *ngIf="!isLoggedIn" class="nav-item"><a class="nav-link" routerLink="register">Register</a></li>
+	        			<li *ngIf="!isLoggedIn" class="nav-item"><a class="nav-link" routerLink="login">Login</a></li>
+	        			<li class="nav-item"><a class="nav-link" routerLink="service">Services</a></li>
+	        			<li class="nav-item" *ngIf="user_type==='patient' && isLoggedIn"><a class="nav-link" routerLink="book-appointment">Book Appointment</a></li>
+						<li class="nav-item" *ngIf="user_type==='patient' && isLoggedIn"><a class="nav-link" routerLink="my-appointments">My Appointments</a></li>
+						<li class="nav-item" *ngIf="user_type==='patient' && isLoggedIn"><a class="nav-link" routerLink="doctors">Doctors</a></li>
+						<li class="nav-item" *ngIf="user_type==='doctor' && isLoggedIn"><a class="nav-link" routerLink="view-appointments">View Appointments</a></li>
+						<li class="nav-item" *ngIf="user_type==='admin' && isLoggedIn"><a class="nav-link" routerLink="view-all-appointments">View Appointments</a></li>
+						<li class="nav-item" *ngIf="user_type==='admin' && isLoggedIn"><a class="nav-link" routerLink="doctors">Doctors</a></li>
+						<li class="nav-item" *ngIf="user_type==='admin' && isLoggedIn"><a class="nav-link" routerLink="add-doctor">Add Doctors</a></li>
+						<li class="nav-item" *ngIf="isLoggedIn"><a class="nav-link" (click)="logout()">Logout</a></li>
+	      			</ul>
+	    		</div>
+	  		</div>
+		</nav>
+	</div>
+</header>

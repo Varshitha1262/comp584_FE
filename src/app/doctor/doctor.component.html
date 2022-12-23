@@ -1,0 +1,74 @@
+<section id="title-main">
+	<div class="container">
+		<h1>Doctors</h1>
+	</div>
+</section>
+
+
+<section id="doctors">
+	<div class="container">
+		<h2>Our Expert Doctors</h2>
+
+        <div class="row">
+
+
+            <div class="col-md-4" *ngFor="let user of currentData; index as i;" >
+                <div class="inner-block">
+                    <img  src="assets/images/doc-{{i+1}}.jpg" class="img-fluid">
+                    <div class="content">
+                        <h3>{{user.doctor.full_name}} ({{user.doctor.specialization}})</h3>
+                        <p>Email : {{user.email}}</p>
+                        <p>Contact : {{user.doctor.contact}}</p>
+                    </div>
+                </div>
+            </div>
+    
+
+           
+
+
+
+
+            <!-- <div class="col-md-4">
+                <div class="inner-block">
+                    <img src="assets/images/doc-2.jpg" class="img-fluid">
+                    <div class="content">
+                        <h3>Dr. Kathryn Wood</h3>
+                        <p>Pulmonary</p>
+                    </div>
+                </div>
+            </div>
+    
+           <div class="col-md-4">
+            <div class="inner-block">
+                <img src="assets/images/doc-3.jpg" class="img-fluid">
+                <div class="content">
+                    <h3>Dr. Hooman Azmi</h3>
+                    <p> Dental </p>
+                </div>
+            </div>
+           </div>
+    
+           <div class="col-md-4">
+            <div class="inner-block">
+                <img src="assets/images/doc-4.jpg" class="img-fluid">
+                <div class="content">
+                    <h3>Dr. Peter Parker</h3>
+                    <p>Neurologist</p>
+                </div>
+            </div>
+           </div>
+    
+           <div class="col-md-4">
+            <div class="inner-block">
+                <img src="assets/images/doc-5.jpg" class="img-fluid">
+                <div class="content">
+                    <h3>Dr. Stewart Adams</h3>
+                    <p>Xray</p>
+                </div>
+            </div>
+           </div> -->
+        </div>
+		
+	</div>
+</section>

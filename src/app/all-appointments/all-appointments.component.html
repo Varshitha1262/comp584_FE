@@ -1,0 +1,51 @@
+<section id="title-main">
+	<div class="container">
+		<h1>Appointment List</h1>
+	</div>
+</section>
+
+
+<section class="appointment-list table-listing">
+    <div class="container">
+        <div class="card">
+            <div class="table-responsive">
+               <table class="table">
+                  <thead>
+                     <tr>
+                        <th class="border-top-0">S.No</th>
+                        <th class="border-top-0">Patient Name</th>
+                        <th class="border-top-0">Patient Email</th>
+                        <th class="border-top-0">Patient Contact</th>
+                        <th class="border-top-0">Doctor</th>
+                        <th class="border-top-0">Doctor Contact</th>
+                        <th class="border-top-0">Appointment Date</th>
+                        <th class="border-top-0">Appointment Time</th>
+                        <th class="border-top-0">Status</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr *ngFor="let user of currentData; index as i;">
+                        <td>{{i+1}}</td>
+                        <td>
+                           <div class="display-flex">
+                              <h4>{{user.name}}</h4>
+                           </div>
+                        </td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.contact}}</td>
+                        <td>{{user.doctor.full_name}}</td>
+                        <td>{{user.doctor.contact}}</td>                        
+                        <td>{{user.appointment_date}}</td>
+                        <td>{{user.appointment_time}}</td>
+                        <td>{{user.status}}</td>
+                       
+                       
+                     </tr>
+                     
+                    
+                  </tbody>
+               </table>
+            </div>
+         </div>
+    </div>
+</section>

@@ -1,0 +1,59 @@
+<section id="title-main">
+	<div class="container">
+		<h1>Add Doctor</h1>
+	</div>
+</section>
+
+
+<section id="make-appointment">
+	<div class="container">
+		<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+			<div class="row">
+				
+				
+				<div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Name</label>
+						<input type="text" name="full_name" formControlName="full_name" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Email</label>
+						<input type="email" name="email" formControlName="email" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Contact</label>
+						<input type="text" name="contact" formControlName="contact" class="form-control">
+					</div>
+				</div>
+                <div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Password</label>
+						<input type="password" name="password" formControlName="password" class="form-control">
+					</div>
+				</div>
+                <div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Specialization</label>
+						<input type="text" name="specialization" formControlName="specialization" class="form-control">
+					</div>
+				</div>
+                <div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Qualification</label>
+						<input type="text" name="qualification" formControlName="qualification" class="form-control">
+					</div>
+				</div>
+			</div>
+			           
+			<div class="row">
+				<div class="col-md-12">
+					<button type="submit" class="appointment-btn">Add Doctor</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>

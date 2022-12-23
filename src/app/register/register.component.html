@@ -1,0 +1,80 @@
+<section id="title-main">
+	<div class="container">
+		<h1>Register</h1>
+	</div>
+</section>
+
+
+<section id="make-appointment">
+	<div class="container">
+		<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+			<div class="row">
+				
+				
+				<div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Name</label>
+						<input type="text" name="name" formControlName="name" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Email</label>
+						<input type="email" name="email" formControlName="email" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Contact</label>
+						<input type="text" name="contact" formControlName="contact" class="form-control">
+					</div>
+				</div>
+                <div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Password</label>
+						<input type="password" name="password" formControlName="password" class="form-control">
+					</div>
+				</div>
+                <div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Age</label>
+						<input type="number" name="age" formControlName="age" class="form-control">
+					</div>
+				</div>
+               
+				<div class="col-md-6 col-lg-4">
+					<div class="mb-4">
+						<label>Gender</label>
+						<select name="gender" formControlName="gender" class="form-control">
+							<option value="">---Select Gender---</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="mb-4">
+						<label>Address</label>
+						<textarea name="address" formControlName="address" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+
+            <div class="row">
+				<div class="col-md-12">
+					<div class="mb-4">
+						<label>Health History</label>
+						<textarea name="health_history" formControlName="health_history" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button type="submit" class="appointment-btn">Register</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
